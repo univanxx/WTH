@@ -7,9 +7,6 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import {Link } from "react-router-dom";
 
-
-
-
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '100vh',
@@ -56,7 +53,8 @@ export default function SignInSide() {
               margin="normal"
               required
               fullWidth
-              label="ОГРН"
+             // label="ОГРН"
+              label="1027700140930"
             />
               <Link to="/company"> 
             <Button

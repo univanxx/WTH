@@ -30,7 +30,7 @@ export default function Deposits() {
         <span>КПП: 773501001</span>     
       </div>
       <Divider variant="middle" />
-      <p>Требования к заявителю</p>
+      <h3>Требования к заявителю:</h3>
       <Divider variant="middle" />
       <CheckboxLabels/>
     </React.Fragment>

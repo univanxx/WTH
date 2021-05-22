@@ -3,7 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import SimpleList from './SimpleList';
+import FinList from './FinList'
+
 
 const useStyles = makeStyles({
   root: {
@@ -22,7 +23,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SimpleCard() {
+export default function FinCard() {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
 
@@ -30,9 +31,9 @@ export default function SimpleCard() {
     <Card className={classes.root}>
       <CardContent>
          <Typography variant="h5" component="h2">
-          Нефинансовые
+          Финансовые
         </Typography>  
-       <SimpleList/>
+        <FinList/>    
       </CardContent>
     </Card>
   );
