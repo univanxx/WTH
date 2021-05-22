@@ -1,46 +1,30 @@
 import React from 'react';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
+import Link from '@material-ui/core/Link';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 import Title from './Title';
-
-// Generate Order Data
-function createData(id, date, name) {
-  return { id, date, name};
-}
-
-const rows = [
-  createData(0, '16 Mar, 2019', 'Нефинансовы меры поддержки'),
- ];
 
 function preventDefault(event) {
   event.preventDefault();
 }
 
+const useStyles = makeStyles({
+  depositContext: {
+    flex: 1,
+  },
+});
 
-export default function Orders() {
-  
+export default function Order() {
+  const classes = useStyles();
   return (
     <React.Fragment>
-      <Title>Ранее предоставленные меры поддержки</Title>
-      <Table>
-        <TableHead>
-          <TableRow>
-            <TableCell>Дата</TableCell>
-            <TableCell>Название</TableCell>
-            </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.id}>
-              <TableCell>{row.date}</TableCell>
-              <TableCell>{row.name}</TableCell>
-              </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+      <Title>ВАМ ДОСТУПНЫ СЛЕДУЮЩИЕ МЕРЫ ПОДДЕРЖКИ:</Title>
+      <div>
+      <h3>Программа ФРП "Приоритетные проекты"</h3>
+       <Link color="primary" href="#" onClick={preventDefault}>
+          Перейти
+        </Link>
+      </div>
     </React.Fragment>
   );
 }
