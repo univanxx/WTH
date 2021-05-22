@@ -1,15 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import SignInSide from './pages/SignInSide';
+import Company from './pages/Company';
 
-import SignInSide from './components/SignInSide'
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-    <SignInSide/>
-  </React.StrictMode>,
+  
+  <BrowserRouter>
+  <Switch>
+  <Route exact path="/" component={SignInSide} />
+  <Route path="/company" component={Company} />
+ </Switch>  
+ </BrowserRouter>,    
+  
+  
   document.getElementById('root')
 );
